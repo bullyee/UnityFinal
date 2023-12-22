@@ -34,7 +34,6 @@ public class CollisionDetecter : MonoBehaviour
             if(!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
             if (collision.transform.name.Contains("ball1"))
             {
-                Debug.Log("here");
                 Vector3 pos = collision.transform.position;
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
