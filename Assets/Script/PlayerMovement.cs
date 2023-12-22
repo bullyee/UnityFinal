@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forward = new Vector3(reference.transform.position.x, 0, reference.transform.position.z) 
             - new Vector3(cam.transform.position.x, 0, cam.transform.position.z);
         Vector3 right = Vector3.Cross(new Vector3(0, 1, 0), forward);
+        if (Input.GetKey(KeyCode.LeftShift)) speed = 5;
+        else speed = 20;
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += forward.normalized * speed * Time.deltaTime;
