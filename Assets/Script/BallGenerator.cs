@@ -18,6 +18,7 @@ public class BallGenerator : MonoBehaviour
         
     }
 
+    //generates a ball on player's hand (with disables physics and collider)
     public void GenerateBall(Transform t)
     {
         System.Random rand = new System.Random();
@@ -56,6 +57,7 @@ public class BallGenerator : MonoBehaviour
         t.transform.GetComponent<BallDrop>().current = c;
     }
 
+    // drop a ball (activate plysics and collider)
     public void DropBall(Transform t)
     {
         BallDrop fd = t.GetComponent<BallDrop>();

@@ -13,14 +13,16 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //lock cursor & hide cursor in game
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        transform.position = new Vector3(57.5f, 50.4f,-11.7f);
+        transform.position = new Vector3(57.5f, 50.4f,-11.7f); //set init place
     }
 
     // Update is called once per frame
     void Update()
     {
+        //code to move hand
         Vector3 forward = new Vector3(reference.transform.position.x, 0, reference.transform.position.z) 
             - new Vector3(cam.transform.position.x, 0, cam.transform.position.z);
         Vector3 right = Vector3.Cross(new Vector3(0, 1, 0), forward);
