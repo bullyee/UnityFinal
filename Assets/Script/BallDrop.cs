@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitDrop : MonoBehaviour
+public class BallDrop : MonoBehaviour
 {
     [SerializeField] GameObject ballgenerator;
     [SerializeField] GameObject indicator;
