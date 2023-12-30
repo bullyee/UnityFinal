@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class B2CollisionDetecter : MonoBehaviour
 {
+    //計分版數字更改
+    public GameObject catchboard;
+    scorecounter sc;
+    //
     public GameObject ballgenerator;
     public GameObject owner;
     [SerializeField] BallGenerator bg;
@@ -13,6 +17,8 @@ public class B2CollisionDetecter : MonoBehaviour
     void Start()
     {
         bg = ballgenerator.GetComponent<BallGenerator>();
+        catchboard = GameObject.Find("scoreboard");
+        sc = catchboard.GetComponent<scorecounter>();
     }
 
     // Update is called once per frame
@@ -45,6 +51,7 @@ public class B2CollisionDetecter : MonoBehaviour
                 b.owner = owner;
                 gameObject.SetActive(false);
                 Destroy(gameObject);
+                sc.scoreadd(2);
             }
         }
     }

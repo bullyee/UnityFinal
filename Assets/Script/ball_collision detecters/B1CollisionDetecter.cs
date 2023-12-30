@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class B1CollisionDetecter : MonoBehaviour
 {
+    //計分版數字更改
+    public GameObject catchboard;
+    scorecounter sc;
     //Auto Completed when generated
     public GameObject ballgenerator;
     public GameObject owner;
@@ -15,6 +18,8 @@ public class B1CollisionDetecter : MonoBehaviour
     void Start()
     {
         bg = ballgenerator.GetComponent<BallGenerator>();
+        catchboard = GameObject.Find("scoreboard");
+        sc = catchboard.GetComponent<scorecounter>();
     }
 
     // Update is called once per frame
@@ -53,6 +58,7 @@ public class B1CollisionDetecter : MonoBehaviour
                 //destroy self
                 gameObject.SetActive(false);
                 Destroy(gameObject);
+                sc.scoreadd(1);//紅球加一分
             }
         }
     }

@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallGenerator : MonoBehaviour
 {
     [SerializeField] List<GameObject> balls = new List<GameObject>();
+    //查看下顆球(測試版本，等之後用模型的預覽圖)
+    [SerializeField] GameObject next_ball;
+    public Sprite[] images;
+    Image next_image;
+    //分別把現在的球和下一顆球傳給玩家跟預覽圖
+    int next_index=0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        next_image=next_ball.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -22,7 +29,12 @@ public class BallGenerator : MonoBehaviour
     public void GenerateBall(Transform t)
     {
         System.Random rand = new System.Random();
-        int b = rand.Next(balls.Count);
+        //int b = rand.Next(balls.Count);
+        //更換預覽圖
+        int b= next_index;
+        next_index=rand.Next(balls.Count);
+        next_image.sprite = images[next_index];
+        //
         GameObject c = Instantiate(balls[b], t.position, new Quaternion());
         Collider collider = c.GetComponent<Collider>();
         collider.enabled = false;
