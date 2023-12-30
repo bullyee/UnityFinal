@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class B10CollisionDetecter : MonoBehaviour
 {
+    //計分版數字更改
+    public GameObject catchboard;
+    scorecounter sc;
+    //
     public GameObject owner;
     // Start is called before the first frame update
     void Start()
     {
-        
+        catchboard = GameObject.Find("scoreboard");
+        sc = catchboard.GetComponent<scorecounter>();
     }
 
     // Update is called once per frame
@@ -27,6 +32,7 @@ public class B10CollisionDetecter : MonoBehaviour
             Destroy(collision.gameObject);
             gameObject.SetActive(false);
             Destroy(gameObject);
+            sc.scoreadd(10);
         }
     }
 
