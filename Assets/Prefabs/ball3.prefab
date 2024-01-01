@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7743473874033518797}
   - component: {fileID: 4234640042189974667}
   - component: {fileID: 5688742950750619364}
+  - component: {fileID: -5069497457295597439}
   m_Layer: 0
   m_Name: ball3
   m_TagString: Untagged
@@ -95,11 +96,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3815f700cdfe32d4b9a62a1979a64426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catchboard: {fileID: 0}
   ballgenerator: {fileID: 0}
   owner: {fileID: 0}
   bg: {fileID: 0}
   ball4: {fileID: 662106539540300889, guid: f6468ab14e6eb1d4eb44459004c20cd7, type: 3}
   collision_occured: 0
+--- !u!114 &-5069497457295597439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662106539540300889}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c883861db1037b41b03157e1a8b9d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8326210515676165541
 GameObject:
   m_ObjectHideFlags: 0

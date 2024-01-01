@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7743473874033518797}
   - component: {fileID: 4234640042189974667}
   - component: {fileID: 1753161215658613753}
+  - component: {fileID: -2663330687845860511}
   m_Layer: 0
   m_Name: ball7
   m_TagString: Untagged
@@ -95,10 +96,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6506a5f5796234c89ba95920d9a247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catchboard: {fileID: 0}
   ballgenerator: {fileID: 0}
   owner: {fileID: 0}
   bg: {fileID: 0}
   ball8: {fileID: 662106539540300889, guid: 0e6134b50d57bfe468a8055df11adfff, type: 3}
+--- !u!114 &-2663330687845860511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662106539540300889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c883861db1037b41b03157e1a8b9d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8326210515676165541
 GameObject:
   m_ObjectHideFlags: 0
