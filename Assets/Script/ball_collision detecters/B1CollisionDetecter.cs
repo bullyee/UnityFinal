@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 
 public class B1CollisionDetecter : MonoBehaviour
 {
@@ -38,6 +40,8 @@ public class B1CollisionDetecter : MonoBehaviour
             {
                 bg.GenerateBall(owner.transform);
                 collision_occured = true;
+                EndGameDetection edg = GetComponent<EndGameDetection>();
+                edg.enabled = true;
             }
             //prevent one collision code from activating twice
             if(!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
@@ -55,6 +59,8 @@ public class B1CollisionDetecter : MonoBehaviour
                 b.collision_occured = true;
                 b.ballgenerator = ballgenerator;
                 b.owner = owner;
+                EndGameDetection edg = c.GetComponent<EndGameDetection>();
+                edg.enabled = true;
                 //destroy self
                 gameObject.SetActive(false);
                 Destroy(gameObject);

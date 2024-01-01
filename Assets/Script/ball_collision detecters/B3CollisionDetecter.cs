@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 
 public class B3CollisionDetecter : MonoBehaviour
 {
@@ -35,6 +37,8 @@ public class B3CollisionDetecter : MonoBehaviour
             {
                 bg.GenerateBall(owner.transform);
                 collision_occured = true;
+                EndGameDetection edg = GetComponent<EndGameDetection>();
+                edg.enabled = true;
             }
             if (!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
             if (collision.transform.name.Contains("ball3"))
@@ -49,6 +53,8 @@ public class B3CollisionDetecter : MonoBehaviour
                 b.collision_occured = true;
                 b.ballgenerator = ballgenerator;
                 b.owner = owner;
+                EndGameDetection edg = c.GetComponent<EndGameDetection>();
+                edg.enabled = true;
                 gameObject.SetActive(false);
                 Destroy(gameObject);
                 sc.scoreadd(3);

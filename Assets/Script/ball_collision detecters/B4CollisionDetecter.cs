@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 
 public class B4CollisionDetecter: MonoBehaviour
 {
@@ -35,6 +37,8 @@ public class B4CollisionDetecter: MonoBehaviour
             {
                 bg.GenerateBall(owner.transform);
                 collision_occured = true;
+                EndGameDetection edg = GetComponent<EndGameDetection>();
+                edg.enabled = true;
             }
             if (!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
             if (collision.transform.name.Contains("ball4"))
