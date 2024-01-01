@@ -21,7 +21,7 @@ public class EndGameDetection : MonoBehaviour
     {
         if (other.transform.name == "End" && enabled)
         {
-            Time.timeScale = 0;
+            Physics.simulationMode = SimulationMode.Script;
             //add scene transform here
         }
     }

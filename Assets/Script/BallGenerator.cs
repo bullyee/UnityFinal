@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,7 +34,7 @@ public class BallGenerator : MonoBehaviour
         next_index=rand.Next(balls.Count);
         next_image.sprite = images[next_index];
         //
-        GameObject c = Instantiate(balls[b], t.position, new Quaternion());
+        GameObject c = Instantiate(balls[b], t.position, balls[b].transform.rotation);
         Collider collider = c.GetComponent<Collider>();
         collider.enabled = false;
         c.transform.parent = t;

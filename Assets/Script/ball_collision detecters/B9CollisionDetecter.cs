@@ -37,7 +37,7 @@ public class B9CollisionDetecter : MonoBehaviour
             collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             gameObject.GetComponent<Collider>().enabled = false;
-            GameObject c = Instantiate(ball10, (pos + transform.position) / 2, new Quaternion());
+            GameObject c = Instantiate(ball10, (pos + transform.position) / 2, ball10.transform.rotation);
             c.transform.parent = bg.transform;
             gameObject.SetActive(false);
             Destroy(gameObject);

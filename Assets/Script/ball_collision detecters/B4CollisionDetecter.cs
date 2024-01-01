@@ -47,7 +47,7 @@ public class B4CollisionDetecter: MonoBehaviour
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
                 gameObject.GetComponent<Collider>().enabled = false;
-                GameObject c = Instantiate(ball5, (pos + transform.position) / 2, new Quaternion());
+                GameObject c = Instantiate(ball5, (pos + transform.position) / 2, ball5.transform.rotation);
                 c.transform.parent = bg.transform;
                 B5CollisionDetecter b = c.GetComponent<B5CollisionDetecter>();
                 b.ballgenerator = ballgenerator;
