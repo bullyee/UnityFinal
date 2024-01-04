@@ -26,7 +26,6 @@ public class BallDrop : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             bg.DropBall(transform);
-            indicator_mesh.enabled = false;
         }
         if (Input.GetMouseButtonDown(1))
         {

@@ -12,14 +12,16 @@ public class B1CollisionDetecter : MonoBehaviour
     //Auto Completed when generated
     public GameObject ballgenerator;
     public GameObject owner;
-    //使用者設定，下一階的球
+    //使用者設定
     [SerializeField] GameObject ball2;
     //set when Start()
     BallGenerator bg;
     public bool collision_occured = false;
+    PopSoundEffect SE;
     void Start()
     {
         bg = ballgenerator.GetComponent<BallGenerator>();
+        SE = ballgenerator.GetComponent<PopSoundEffect>();
         catchboard = GameObject.Find("scoreboard");
         sc = catchboard.GetComponent<scorecounter>();
     }
@@ -54,6 +56,7 @@ public class B1CollisionDetecter : MonoBehaviour
                 //instantiate the next lvl ball
                 gameObject.GetComponent<Collider>().enabled = false;
                 GameObject c = Instantiate(ball2, (pos + transform.position) / 2, ball2.transform.rotation);
+                SE.PlayPop();//play pop SE
                 c.transform.parent = bg.transform;
                 B2CollisionDetecter b = c.GetComponent<B2CollisionDetecter>();
                 b.collision_occured = true;
