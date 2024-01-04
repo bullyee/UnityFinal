@@ -50,5 +50,7 @@ public class PlayerMovement : MonoBehaviour
         if (newpos.x < minpos.x) newpos.x = minpos.x;
         if (newpos.z < minpos.y) newpos.z = minpos.y;
         transform.position = newpos;
+
+
     }
 }
