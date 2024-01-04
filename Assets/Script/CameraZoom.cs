@@ -8,8 +8,8 @@ public class CameraZoom : MonoBehaviour
     [SerializeField] CinemachineFreeLook freelookcam;
     [SerializeField] CinemachineFreeLook.Orbit[] OriginalOrbits;
 
-    [Range(0.01f, 0.25f)]
-    public float minzoom = 0.25f;
+    [Range(0.01f, 0.5f)]
+    public float minzoom = 0.3f;
     [Range(1f,5f)]
     public float maxzoom = 1.0f;
 

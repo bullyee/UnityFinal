@@ -14,12 +14,14 @@ public class B8CollisionDetecter : MonoBehaviour
     public GameObject owner;
     [SerializeField] BallGenerator bg;
     [SerializeField] GameObject ball9;
+    PopSoundEffect SE;
     // Start is called before the first frame update
     void Start()
     {
         bg = ballgenerator.GetComponent<BallGenerator>();
         catchboard = GameObject.Find("scoreboard");
         sc = catchboard.GetComponent<scorecounter>();
+        SE = ballgenerator.GetComponent<PopSoundEffect>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class B8CollisionDetecter : MonoBehaviour
             Destroy(collision.gameObject);
             gameObject.GetComponent<Collider>().enabled = false;
             GameObject c = Instantiate(ball9, (pos + transform.position) / 2, ball9.transform.rotation);
+            SE.PlayPop();
             c.transform.parent = bg.transform;
             B9CollisionDetecter b = c.GetComponent<B9CollisionDetecter>();
             b.ballgenerator = ballgenerator;
