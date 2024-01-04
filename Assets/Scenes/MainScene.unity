@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87944351}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13982156, y: -0.6857906, z: 0.13678358, w: 0.7010218}
+  m_LocalRotation: {x: 0.13982154, y: -0.6857904, z: 0.13678356, w: 0.70102197}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1557,7 +1557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13982156, y: -0.6857906, z: 0.13678366, w: 0.7010217}
+  m_LocalRotation: {x: 0.13982157, y: -0.68579054, z: 0.13678363, w: 0.70102185}
   m_LocalPosition: {x: 110.26312, y: 53.79, z: -9.937414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2081,10 +2081,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freelookcam: {fileID: 0}
   OriginalOrbits: []
-  minzoom: 0.5
+  minzoom: 0.25
   maxzoom: 1
   zAxis:
-    Value: 0.5
+    Value: 1
     m_SpeedMode: 0
     m_MaxSpeed: 50
     m_AccelTime: 0.1
@@ -2172,7 +2172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477118940}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16280293, y: -0.6811783, z: 0.1593902, w: 0.69576305}
+  m_LocalRotation: {x: 0.16280295, y: -0.6811781, z: 0.15939015, w: 0.69576323}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2378,7 +2378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522079711}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1642342, y: -0.6805916, z: 0.16066584, w: 0.69570744}
+  m_LocalRotation: {x: 0.16423419, y: -0.6805915, z: 0.16066581, w: 0.6957075}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
