@@ -11,6 +11,7 @@ public class B10CollisionDetecter : MonoBehaviour
     scorecounter sc;
     //
     public GameObject owner;
+    public PopSoundEffect SE;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class B10CollisionDetecter : MonoBehaviour
         if (!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
         if (collision.transform.name.Contains("ball_10"))
         {
+            SE.PlayPop();
             collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             gameObject.SetActive(false);
