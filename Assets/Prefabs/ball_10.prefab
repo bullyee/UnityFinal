@@ -45,7 +45,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662106539540300889}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 0
   m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -78,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catchboard: {fileID: 0}
   owner: {fileID: 0}
+  SE: {fileID: 0}
 --- !u!114 &-876509463612518839
 MonoBehaviour:
   m_ObjectHideFlags: 0
