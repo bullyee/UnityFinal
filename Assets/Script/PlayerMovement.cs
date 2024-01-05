@@ -51,23 +51,6 @@ public class PlayerMovement : MonoBehaviour
         if (newpos.z < minpos.y) newpos.z = minpos.y;
         transform.position = newpos;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ToggleCursor();
-        }
-    }
 
-    void ToggleCursor()
-    {
-        if (!Cursor.visible)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
     }
 }

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Rainbow : MonoBehaviour
 {
-    public Material[] mt;
+    public Material mt;
     public Color32[] colors;
-    Renderer rend;
-    Material[] currmt;
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        currmt = GetComponent<Renderer>().materials;
+        mt = transform.GetComponent<MeshRenderer>().material;
         colors = new Color32[7]
         {
             new Color32(255, 0, 0, 255), //red
@@ -37,11 +34,9 @@ public class Rainbow : MonoBehaviour
         int i = 0;
         while (true)
         {
-            for (float interpolant = 0f; interpolant < 1f; interpolant += 0.1f)
+            for (float interpolant = 0f; interpolant < 1f; interpolant += 0.2f)
             {
-                currmt[0].color = Color.Lerp(colors[i % 7], colors[(i + 1) % 7], interpolant);
-                currmt[1].color = Color.Lerp(colors[i % 7], colors[(i + 1) % 7], interpolant);
-                GetComponent<Renderer>().materials = currmt;
+                mt.color = Color.Lerp(colors[i % 7], colors[(i + 1) % 7], interpolant);
                 yield return null;
             }
             i++;
