@@ -54,8 +54,8 @@ public class B2CollisionDetecter : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
                 gameObject.GetComponent<Collider>().enabled = false;
-                GameObject c = Instantiate(ball3, (pos + transform.position) / 2, ball3.transform.rotation);
                 SE.PlayPop();
+                GameObject c = Instantiate(ball3, (pos + transform.position) / 2, ball3.transform.rotation);
                 c.transform.parent = bg.transform;
                 B3CollisionDetecter b = c.GetComponent<B3CollisionDetecter>();
                 b.collision_occured = true;
