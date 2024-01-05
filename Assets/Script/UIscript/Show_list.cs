@@ -19,6 +19,10 @@ public class Show_list : MonoBehaviour,IPointerClickHandler
         {
             uItest.show_up();
         }
+        else if(target.IsActive()) 
+        {
+            uItest.hide_up();
+        }
     }
 
 }

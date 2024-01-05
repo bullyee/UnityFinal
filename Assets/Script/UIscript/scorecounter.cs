@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class scorecounter : MonoBehaviour
 {
-    public int score = 0;
+    public int higest=0,score = 0;
     public Image score_02,score_01,score_00,score_03;
     public Sprite[] numberSprites;
     // Start is called before the first frame update

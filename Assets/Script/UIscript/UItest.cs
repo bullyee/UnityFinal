@@ -17,8 +17,20 @@ public class UItest : MonoBehaviour
         {
             gameObject.SetActive(true);
             objTransform.localScale = Vector3.one * 0.001f;
-            objTransform.DOScale(0.3f, 0.2f);
+            objTransform.DOScale(0.35f, 0.2f);
         }
     } 
+    public void hide_up() 
+    {
+        Transform objTransform = gameObject.transform;
+        if (objTransform != null)
+        {
+            objTransform.DOScale(0.001f, 0.2f).OnComplete(hide);
+        }
+    }
+    void hide()
+    {
+        gameObject.SetActive(false);
+    }
 
 }
