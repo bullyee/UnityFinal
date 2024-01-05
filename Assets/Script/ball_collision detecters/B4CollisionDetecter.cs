@@ -41,6 +41,7 @@ public class B4CollisionDetecter: MonoBehaviour
                 collision_occured = true;
                 EndGameDetection edg = GetComponent<EndGameDetection>();
                 edg.enabled = true;
+                owner.GetComponent<BallDrop>().ToggleIndicator();
             }
             if (!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
             if (collision.transform.name.Contains("ball4"))
@@ -49,8 +50,8 @@ public class B4CollisionDetecter: MonoBehaviour
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
                 gameObject.GetComponent<Collider>().enabled = false;
-                GameObject c = Instantiate(ball5, (pos + transform.position) / 2, ball5.transform.rotation);
                 SE.PlayPop();
+                GameObject c = Instantiate(ball5, (pos + transform.position) / 2, ball5.transform.rotation);
                 c.transform.parent = bg.transform;
                 B5CollisionDetecter b = c.GetComponent<B5CollisionDetecter>();
                 b.ballgenerator = ballgenerator;

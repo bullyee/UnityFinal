@@ -44,6 +44,7 @@ public class B1CollisionDetecter : MonoBehaviour
                 collision_occured = true;
                 EndGameDetection edg = GetComponent<EndGameDetection>();
                 edg.enabled = true;
+                owner.GetComponent<BallDrop>().ToggleIndicator();
             }
             //prevent one collision code from activating twice
             if(!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
@@ -55,8 +56,8 @@ public class B1CollisionDetecter : MonoBehaviour
                 Destroy(collision.gameObject);
                 //instantiate the next lvl ball
                 gameObject.GetComponent<Collider>().enabled = false;
-                GameObject c = Instantiate(ball2, (pos + transform.position) / 2, ball2.transform.rotation);
                 SE.PlayPop();//play pop SE
+                GameObject c = Instantiate(ball2, (pos + transform.position) / 2, ball2.transform.rotation);
                 c.transform.parent = bg.transform;
                 B2CollisionDetecter b = c.GetComponent<B2CollisionDetecter>();
                 b.collision_occured = true;
