@@ -39,8 +39,8 @@ public class B8CollisionDetecter : MonoBehaviour
             collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             gameObject.GetComponent<Collider>().enabled = false;
-            SE.PlayPop();
             GameObject c = Instantiate(ball9, (pos + transform.position) / 2, ball9.transform.rotation);
+            SE.PlayPop();
             c.transform.parent = bg.transform;
             B9CollisionDetecter b = c.GetComponent<B9CollisionDetecter>();
             b.ballgenerator = ballgenerator;
