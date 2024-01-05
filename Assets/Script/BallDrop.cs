@@ -34,7 +34,7 @@ public class BallDrop : MonoBehaviour
     }
     
     //show or hide indicator
-    void ToggleIndicator()
+    public void ToggleIndicator()
     {
         if (indicator_mesh.enabled) indicator_mesh.enabled = false;
         else indicator_mesh.enabled = true;

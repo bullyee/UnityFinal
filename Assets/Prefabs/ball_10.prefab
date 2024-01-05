@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1871735878883585916}
   - component: {fileID: -906763091870637415}
   - component: {fileID: 2182148486577055329}
+  - component: {fileID: 3135065730431490623}
   m_Layer: 0
   m_Name: ball_10
   m_TagString: Untagged
@@ -164,3 +165,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2895103527710799428, guid: 2c4566f3cf3cbfa40a4ca22b0c46a6f2, type: 3}
+--- !u!114 &3135065730431490623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662106539540300889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f0d075b30dfb8489801f847e4bec61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mt: {fileID: 0}
+  colors: []
