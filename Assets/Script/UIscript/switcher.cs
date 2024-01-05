@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class switcher : MonoBehaviour, IPointerClickHandler
 {
-    public int SceneIndexDistination = 1;
+    public int SceneIndexDistination ;
     public void OnPointerClick(PointerEventData e)
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(SceneIndexDistination);
+        Debug.Log("click");
     }
     // Start is called before the first frame update
     void Start()
