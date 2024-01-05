@@ -45,6 +45,7 @@ public class B2CollisionDetecter : MonoBehaviour
                 collision_occured = true;
                 EndGameDetection edg = GetComponent<EndGameDetection>();
                 edg.enabled = true;
+                owner.GetComponent<BallDrop>().ToggleIndicator();
             }
             if (!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
             if (collision.transform.name.Contains("ball2"))

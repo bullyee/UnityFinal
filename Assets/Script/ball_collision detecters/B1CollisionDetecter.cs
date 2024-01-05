@@ -44,6 +44,7 @@ public class B1CollisionDetecter : MonoBehaviour
                 collision_occured = true;
                 EndGameDetection edg = GetComponent<EndGameDetection>();
                 edg.enabled = true;
+                owner.GetComponent<BallDrop>().ToggleIndicator();
             }
             //prevent one collision code from activating twice
             if(!collision.gameObject.activeSelf || !gameObject.activeSelf) return;
