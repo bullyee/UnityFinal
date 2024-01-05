@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //lock cursor & hide cursor in game
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         transform.position = new Vector3(57.5f, 55.4f,-11.7f); //set init place
     }

@@ -31,12 +31,14 @@ public class KeyDetector : MonoBehaviour
         {
             Physics.simulationMode = SimulationMode.Update;
             Scene scene = SceneManager.GetActiveScene();
+            Time.timeScale = 1;
             SceneManager.LoadScene(0);
         }
         if (Input.GetKeyDown(KeyCode.R) && end.isend)
         {
             Physics.simulationMode = SimulationMode.Update;
             Scene scene = SceneManager.GetActiveScene();
+            Time.timeScale = 1;
             SceneManager.LoadScene(1);
         }
 

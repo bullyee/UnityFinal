@@ -22,7 +22,7 @@ public class EndGameDetection : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.transform.name == "End" && enabled)
         {
