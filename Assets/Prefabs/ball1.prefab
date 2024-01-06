@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c883861db1037b41b03157e1a8b9d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndgameUI: {fileID: 0}
 --- !u!33 &429374605769806745
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.simulationMode = SimulationMode.Update;
         //lock cursor & hide cursor in game
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -51,6 +52,18 @@ public class PlayerMovement : MonoBehaviour
         if (newpos.z < minpos.y) newpos.z = minpos.y;
         transform.position = newpos;
 
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!Cursor.visible)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+        }
     }
 }

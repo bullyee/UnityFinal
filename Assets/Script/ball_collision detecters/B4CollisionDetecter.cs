@@ -55,6 +55,8 @@ public class B4CollisionDetecter: MonoBehaviour
                 B5CollisionDetecter b = c.GetComponent<B5CollisionDetecter>();
                 b.ballgenerator = ballgenerator;
                 b.owner = owner;
+                EndGameDetection edg = c.GetComponent<EndGameDetection>();
+                edg.EndgameUI = GetComponent<EndGameDetection>().EndgameUI;
                 gameObject.SetActive(false);
                 Destroy(gameObject);
                 sc.scoreadd(4);

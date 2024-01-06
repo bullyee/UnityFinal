@@ -8,6 +8,7 @@ public class BallGenerator : MonoBehaviour
     [SerializeField] List<GameObject> balls = new List<GameObject>();
     //查看下顆球(測試版本，等之後用模型的預覽圖)
     [SerializeField] GameObject next_ball;
+    [SerializeField] GameObject EndGameUI; 
     public Sprite[] images;
     Image next_image;
     //分別把現在的球和下一顆球傳給玩家跟預覽圖
@@ -66,6 +67,8 @@ public class BallGenerator : MonoBehaviour
         rg.useGravity = false;
         rg.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
         t.transform.GetComponent<BallDrop>().current = c;
+        EndGameDetection edg = c.GetComponent<EndGameDetection>();
+        edg.EndgameUI = EndGameUI;
     }
 
     // drop a ball (activate plysics and collider)

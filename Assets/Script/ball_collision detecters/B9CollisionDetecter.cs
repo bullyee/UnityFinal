@@ -44,6 +44,8 @@ public class B9CollisionDetecter : MonoBehaviour
             c.transform.parent = bg.transform;
             B10CollisionDetecter cdt = c.GetComponent<B10CollisionDetecter>();
             cdt.SE = SE;
+            EndGameDetection edg = c.GetComponent<EndGameDetection>();
+            edg.EndgameUI = GetComponent<EndGameDetection>().EndgameUI;
             gameObject.SetActive(false);
             Destroy(gameObject);
             sc.scoreadd(9);

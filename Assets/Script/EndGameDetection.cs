@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class EndGameDetection : MonoBehaviour
 {
+    public GameObject EndgameUI;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,14 +26,14 @@ public class EndGameDetection : MonoBehaviour
         {
             Physics.simulationMode = SimulationMode.Script;
             //add scene transform here
-            scorecounter sc= GameObject.Find("scoreboard").GetComponent<scorecounter>();
+            EndgameUI.SetActive(true);
+            scorecounter sc = GameObject.Find("scoreboard").GetComponent<scorecounter>();
             sc.score_03 = GameObject.Find("record1").GetComponent<Image>();
             sc.score_02 = GameObject.Find("record2").GetComponent<Image>();
             sc.score_01 = GameObject.Find("record3").GetComponent<Image>();
             sc.score_00 = GameObject.Find("record4").GetComponent<Image>();
             sc.scoreadd(0);
-
-
+            
         }
     }
 }

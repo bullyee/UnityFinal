@@ -62,6 +62,7 @@ public class B2CollisionDetecter : MonoBehaviour
                 b.owner = owner;
                 EndGameDetection edg = c.GetComponent<EndGameDetection>();
                 edg.enabled = true;
+                edg.EndgameUI = GetComponent<EndGameDetection>().EndgameUI;
                 gameObject.SetActive(false);
                 Destroy(gameObject);
                 sc.scoreadd(2);
