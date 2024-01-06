@@ -1630,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 180032, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: canvas
       value: 
@@ -1640,24 +1644,32 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: faaf633da37e6a24bbf4a136484dbbba, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: currentPage
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: bookPages.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: faaf633da37e6a24bbf4a136484dbbba, type: 3}
+      objectReference: {fileID: 21300000, guid: 2bd0df3cc54479545957261c02b950ee, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: faaf633da37e6a24bbf4a136484dbbba, type: 3}
+      objectReference: {fileID: 21300000, guid: 5459aed7162ee0443b910540b5cc5013, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: faaf633da37e6a24bbf4a136484dbbba, type: 3}
+      objectReference: {fileID: 21300000, guid: 4a73fa0f0de30c844878cfcb81d6d433, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: faaf633da37e6a24bbf4a136484dbbba, type: 3}
+      objectReference: {fileID: 21300000, guid: 3b5fcc0c369fa854288fb4b812dae4be, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.data[4]
       value: 
@@ -2044,6 +2056,7 @@ GameObject:
   - component: {fileID: 1425326725}
   - component: {fileID: 1425326724}
   - component: {fileID: 1425326723}
+  - component: {fileID: 1425326726}
   m_Layer: 5
   m_Name: Intro
   m_TagString: Untagged
@@ -2153,6 +2166,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425326721}
   m_CullTransparentMesh: 1
+--- !u!114 &1425326726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425326721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430f484ae7c697649b813f385b0ef04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  book: {fileID: 1981989319}
 --- !u!1 &1501894206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2345,7 @@ GameObject:
   - component: {fileID: 1610567374}
   - component: {fileID: 1610567373}
   - component: {fileID: 1610567372}
+  - component: {fileID: 1610567375}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2400,6 +2427,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1610567375
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610567371}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 23d706bd6f912ba4095f30e39d7ae902, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.201
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1630716209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,6 +3377,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968877224}
   m_CullTransparentMesh: 1
+--- !u!1 &1981989319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180032, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+  m_PrefabInstance: {fileID: 1312737357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034281265
 GameObject:
   m_ObjectHideFlags: 0
