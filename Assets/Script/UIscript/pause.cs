@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class pause : MonoBehaviour,IPointerClickHandler
 {
-    public GameObject game;
+    public GameObject game,sb;
+    public Image score01, score02, score03, score00;
+    scorecounter sc;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sc = sb.GetComponent<scorecounter>();
     }
 
     // Update is called once per frame
@@ -23,36 +26,16 @@ public class pause : MonoBehaviour,IPointerClickHandler
         if (Time.timeScale != 0)
         {
             game.SetActive(true);
-            //show_up();
             Time.timeScale = 0;
+            GameObject.Find("s4").GetComponent<Image>().sprite = sc.score_00.sprite;
+            GameObject.Find("s3").GetComponent<Image>().sprite = sc.score_01.sprite;
+            GameObject.Find("s2").GetComponent<Image>().sprite = sc.score_02.sprite;
+            GameObject.Find("s1").GetComponent<Image>().sprite = sc.score_03.sprite;
         }
         else if(Time.timeScale == 0)
         {
             game.SetActive(false);
-            //hide_up();
             Time.timeScale = 1;
         }
-    }
-    public void show_up()
-    {
-        Transform objTransform = game.transform;
-        if (objTransform != null)
-        {
-            gameObject.SetActive(true);
-            objTransform.localScale = Vector3.one * 0.001f;
-            objTransform.DOScale(3f, 0.2f);
-        }
-    }
-    public void hide_up()
-    {
-        Transform objTransform = game.transform;
-        if (objTransform != null)
-        {
-            objTransform.DOScale(0.001f, 0.2f).OnComplete(hide);
-        }
-    }
-    void hide()
-    {
-        gameObject.SetActive(false);
     }
 }

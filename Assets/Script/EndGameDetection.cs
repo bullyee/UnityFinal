@@ -34,16 +34,15 @@ public class EndGameDetection : MonoBehaviour
             if (sc.score >= sc.higest)
             {
                 sc.higest = sc.score;
-                sc.score_03 = GameObject.Find("record1").GetComponent<Image>();
-                sc.score_02 = GameObject.Find("record2").GetComponent<Image>();
-                sc.score_01 = GameObject.Find("record3").GetComponent<Image>();
-                sc.score_00 = GameObject.Find("record4").GetComponent<Image>();
-                sc.scoreadd(0);
-                sc.score_03 = GameObject.Find("s1").GetComponent<Image>();
-                sc.score_02 = GameObject.Find("s2").GetComponent<Image>();
-                sc.score_01 = GameObject.Find("s3").GetComponent<Image>();
-                sc.score_00 = GameObject.Find("s4").GetComponent<Image>();
-                sc.scoreadd(0);
+                GameObject.Find("record1").GetComponent<Image>().sprite=sc.score_03.sprite;
+                GameObject.Find("record4").GetComponent<Image>().sprite = sc.score_00.sprite;
+                GameObject.Find("record3").GetComponent<Image>().sprite = sc.score_01.sprite;
+                GameObject.Find("record2").GetComponent<Image>().sprite = sc.score_02.sprite;
+                GameObject.Find("s1").GetComponent<Image>().sprite = sc.score_03.sprite;
+                GameObject.Find("s4").GetComponent<Image>().sprite = sc.score_00.sprite;
+                GameObject.Find("s3").GetComponent<Image>().sprite = sc.score_01.sprite;
+                GameObject.Find("s2").GetComponent<Image>().sprite = sc.score_02.sprite;
+
             }
         }
     }
